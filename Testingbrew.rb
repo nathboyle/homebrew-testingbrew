@@ -4,6 +4,6 @@ class Testingbrew < Formula
   url "https://github.com/nathboyle/homebrew-testingbrew/archive/refs/tags/v0.0.1.tar.gz"
 
   def install
-    bin.install "nathboyle/testingbrew"
+    bin.install "test.sh"
   end
 end

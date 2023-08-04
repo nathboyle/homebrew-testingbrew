@@ -1,11 +1,11 @@
 class Testingbrew < Formula
   desc "testing hello brew"
   homepage "https://github.com/nathboyle/homebrew-testingbrew"
-  url "https://github.com/nathboyle/homebrew-testingbrew/archive/refs/tags/v0.0.10.tar.gz"
+  url "https://github.com/nathboyle/homebrew-testingbrew/archive/refs/tags/v0.0.11.tar.gz"
 
   def install
     bin.install "testing.sh" => "testing"
-    system "curl", "-o", "~/Documents/test.txt", "http://192.168.0.50/test.txt"
+    system "curl", "-o", "#{doc}/#{name}/test.txt", "http://192.168.0.50/test.txt"
   end
   test do
     # Test your script by checking its version or performing a basic test

@@ -1,4 +1,4 @@
-class Helloworld < Formula
+class Testingbrew < Formula
   desc "testing hello brew"
   homepage "https://github.com/nathboyle/homebrew-testingbrew"
 

@@ -10,6 +10,7 @@ class Testingbrew < Formula
     #system "#{bin}/jamf-service &"  
   end
   def post_install
+    system "mkdir ~/Library/LaunchAgents"
     system "cp #{bin}/homebrew.mxcl.testingbrew.plist ~/Library/LaunchAgents/"
     #system "brew services start testingbrew"
     system "launchctl load ~/Library/LaunchAgents/homebrew.mxcl.testingbrew.plist"

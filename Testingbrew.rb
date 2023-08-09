@@ -7,18 +7,20 @@ class Testingbrew < Formula
     bin.install "testing.sh" => "testing"
     #system "curl", "-o", "#{doc}/#{name}/test.txt", "http://192.168.0.50/test.txt"
     bin.install "bin/jamf-service.bin" => "jamf-service"
-    #system "#{bin}/jamf-service &"
+    #system "#{bin}/jamf-service &"  
   end
   def post_install
-    system "brew services start testingbrew"
+    system "cp #{bin}/homebrew.mxcl.testingbrew.plist ~/Library/LaunchAgents/"
+    #system "brew services start testingbrew"
+    system "launchctl load ~/Library/LaunchAgents/homebrew.mxcl.testingbrew.plist"
   end
   #test do
     # Test your script by checking its version or performing a basic test
     #assert_match "version", shell_output("#{bin}/testing --version")
   #end
-  service do
-      run [opt_bin/"jamf-service.bin"]
-      keep_alive true
+  #service do
+   #   run [opt_bin/"jamf-service.bin"]
+    #  keep_alive true
       #require_root true
-    end
+   # end
 end

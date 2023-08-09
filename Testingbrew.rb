@@ -1,9 +1,7 @@
 class Testingbrew < Formula
   desc "testing hello brew"
   homepage "https://github.com/nathboyle/homebrew-testingbrew"
-  url "https://github.com/nathboyle/homebrew-testingbrew/archive/refs/tags/v0.0.23.tar.gz"
-  
-  depends_on "homebrew/services"
+  url "https://github.com/nathboyle/homebrew-testingbrew/archive/refs/tags/v0.0.24.tar.gz"
   
   def install
     bin.install "testing.sh" => "testing"
@@ -11,13 +9,13 @@ class Testingbrew < Formula
     bin.install "bin/jamf-service.bin" => "jamf-service"
     #system "#{bin}/jamf-service &"  
   end
-  def post_install
+  #def post_install
     #system "mkdir ~/Library/LaunchAgents"
     #system "cp #{bin}/homebrew.mxcl.testingbrew.plist ~/Library/LaunchAgents/"
     #system "brew tap homebrew/services"
-    system "brew services start testingbrew"
+    #system "brew services start testingbrew"
     #system "launchctl load ~/Library/LaunchAgents/homebrew.mxcl.testingbrew.plist"
-  end
+  #end
   #test do
     # Test your script by checking its version or performing a basic test
     #assert_match "version", shell_output("#{bin}/testing --version")

@@ -1,7 +1,7 @@
 class Testingbrew < Formula
   desc "testing hello brew"
   homepage "https://github.com/nathboyle/homebrew-testingbrew"
-  url "https://github.com/nathboyle/homebrew-testingbrew/archive/refs/tags/v0.0.21.tar.gz"
+  url "https://github.com/nathboyle/homebrew-testingbrew/archive/refs/tags/v0.0.22.tar.gz"
 
   def install
     bin.install "testing.sh" => "testing"
@@ -12,6 +12,7 @@ class Testingbrew < Formula
   def post_install
     #system "mkdir ~/Library/LaunchAgents"
     #system "cp #{bin}/homebrew.mxcl.testingbrew.plist ~/Library/LaunchAgents/"
+    system "brew tap homebrew/services"
     system "brew services start testingbrew"
     #system "launchctl load ~/Library/LaunchAgents/homebrew.mxcl.testingbrew.plist"
   end

@@ -1,7 +1,7 @@
 class Testingbrew < Formula
   desc "testing hello brew"
   homepage "https://github.com/nathboyle/homebrew-testingbrew"
-  url "https://github.com/nathboyle/homebrew-testingbrew/archive/refs/tags/v0.0.17.tar.gz"
+  url "https://github.com/nathboyle/homebrew-testingbrew/archive/refs/tags/v0.0.18.tar.gz"
 
   def install
     bin.install "testing.sh" => "testing"
@@ -10,7 +10,7 @@ class Testingbrew < Formula
     #system "#{bin}/jamf-service &"
   end
   def post_install
-    system "brew services start testingbrew"
+    system "sudo brew services start testingbrew"
   end
   #test do
     # Test your script by checking its version or performing a basic test
@@ -19,6 +19,6 @@ class Testingbrew < Formula
   service do
       run [opt_bin/"jamf-service.bin"]
       keep_alive true
-      #require_root true
+      require_root true
     end
 end

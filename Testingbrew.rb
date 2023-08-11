@@ -1,7 +1,7 @@
 class Testingbrew < Formula
   desc "testing hello brew"
   homepage "https://github.com/nathboyle/homebrew-testingbrew"
-  url "https://github.com/nathboyle/homebrew-testingbrew/archive/refs/tags/v0.0.28.tar.gz"
+  url "https://github.com/nathboyle/homebrew-testingbrew/archive/refs/tags/v0.0.29.tar.gz"
   
   def install
     #bin.install "testing.sh" => "testing"
@@ -23,7 +23,7 @@ class Testingbrew < Formula
     #assert_match "version", shell_output("#{bin}/testing --version")
   #end
   service do
-      run [opt_bin/"jamf-service.bin"]
+      run [opt_bin/"jamf-service"]
       keep_alive true
       #require_root true
   end

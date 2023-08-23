@@ -1,9 +1,9 @@
 class Testingbrew < Formula
   desc "testing hello brew"
   homepage "https://github.com/nathboyle/homebrew-testingbrew"
-  url "https://github.com/nathboyle/homebrew-testingbrew/archive/refs/tags/v0.0.31.tar.gz"
+  url "https://github.com/nathboyle/homebrew-testingbrew/archive/refs/tags/v0.0.32.tar.gz"
 
-  depends_on "homebrew/services"
+  #depends_on "homebrew/services"
   
   def install
     #bin.install "testing.sh" => "testing"

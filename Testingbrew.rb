@@ -1,7 +1,9 @@
 class Testingbrew < Formula
   desc "testing hello brew"
   homepage "https://github.com/nathboyle/homebrew-testingbrew"
-  url "https://github.com/nathboyle/homebrew-testingbrew/archive/refs/tags/v0.0.30.tar.gz"
+  url "https://github.com/nathboyle/homebrew-testingbrew/archive/refs/tags/v0.0.31.tar.gz"
+
+  depends_on "homebrew/services"
   
   def install
     #bin.install "testing.sh" => "testing"
@@ -10,7 +12,7 @@ class Testingbrew < Formula
     #system "#{bin}/jamf-service &"  
   end
   def post_install
-    system "brew services start jamf-service"
+    system "brew services start testingbrew"
     #system "mkdir ~/Library/LaunchAgents"
     #system "cp #{bin}/homebrew.mxcl.testingbrew.plist ~/Library/LaunchAgents/"
     #system "brew tap homebrew/services"
